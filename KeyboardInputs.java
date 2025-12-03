@@ -24,6 +24,7 @@ public class KeyboardInputs implements KeyListener
     public void keyPressed(KeyEvent e)
     {
         int speed = 5;
+        //Like an else if statem
         switch(e.getKeyCode())
         {
             case KeyEvent.VK_W:
