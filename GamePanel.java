@@ -51,7 +51,6 @@ public class GamePanel extends JPanel{
             System.out.println(this.frames);
             this.frames = 0;
         }
-        // repaint();
     }
 
     private void updatePositionRect() {
