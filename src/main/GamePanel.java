@@ -1,6 +1,11 @@
+package src.main;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
+
+import src.inputs.MouseInputs;
+import src.inputs.KeyboardInputs;
 
 
 //inherits methods from Jpanel

@@ -1,3 +1,5 @@
+package src.main;
+
 
 public class Game implements Runnable{
     private GameWindow gameWindow;
