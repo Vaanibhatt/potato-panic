@@ -1,13 +1,13 @@
 import javax.swing.JFrame;
-
 public class GameWindow {
     private JFrame jframe;
-
+    private final int WIDTH = 800;
+    private final int HEIGHT = 500;
     public GameWindow(GamePanel gamePanel){
 
         jframe = new JFrame();//Creates new object
 
-        jframe.setSize(400,400);
+        jframe.setSize(this.WIDTH,this.HEIGHT);
         jframe.setLocationRelativeTo(gamePanel);
         jframe.setName("Potato Panic");
         jframe.setTitle("Potato Panic");
@@ -18,4 +18,5 @@ public class GameWindow {
         jframe.setVisible(true); //Updates
  
     }
+
 }

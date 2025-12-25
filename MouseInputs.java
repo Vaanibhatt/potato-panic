@@ -4,7 +4,7 @@ import java.awt.event.MouseMotionListener;
 
 public class MouseInputs implements MouseListener, MouseMotionListener{
 
-    private GamePanel gamePanel;
+    // private GamePanel gamePanel;
     @Override
     public void mouseDragged(MouseEvent e)
     {
