@@ -8,13 +8,18 @@ import java.awt.Color;
 public class World {
     // The smaller depth is the further away it is to the screen
     // The larger the number, the closer it is to the screen
-    Player player;
-    int playerSpeed = 1;
+
+    int playersSpeed = 1;
+    
+    Player player1 = new Player(800, 400, 1,new Color(255,0,0),playersSpeed);
+    Player player2 = new Player(800, 400, 1,new Color(0,255,0),playersSpeed);
+    
     public List<GameObject> createList() {
-        player = new Player(800, 400, 1,new Color(255,0,0),15);
+
         List<GameObject> objectsList = new ArrayList<>();
 
-        objectsList.add(player);
+        objectsList.add(player1);
+        objectsList.add(player2);
         return objectsList;
     }
 

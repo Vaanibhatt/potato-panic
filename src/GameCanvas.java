@@ -20,7 +20,7 @@ public class GameCanvas extends Canvas {
 
         jframe.add(this);
 
-        jframe.requestFocus();
+
 
         this.setIgnoreRepaint(true);
         jframe.setVisible(true);
@@ -46,7 +46,7 @@ public class GameCanvas extends Canvas {
             // Draws objects
             for (GameObject gameObject : objects) {
                 gameObject.draw(graphics);
-
+                
             }
 
             bufferStrategy.show();

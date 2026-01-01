@@ -10,7 +10,7 @@ public class Game {
         KeyHandler keyHandler = new KeyHandler(world, 3);
 
         gameCanvas.addKeyListener(keyHandler);
-        gameCanvas.requestFocus();
+        
         
         final double fps = 60.0;
         final double secondsPerFrame = 1_000_000_000.0 / fps;
@@ -18,18 +18,24 @@ public class Game {
         double lastFrame = System.nanoTime();
         double delta = 0;
 
+        int frames = 0;
+
         // Make all objects here
         List<GameObject> objectsList = world.createList();
         //Makes sure that the game renders the the same amount every frame
         while (true) {
 
-
+            
             now = System.nanoTime();
             delta = now - lastFrame;
             if (delta > secondsPerFrame) {
+                frames ++;
                 gameCanvas.render(objectsList);
                 lastFrame = now;
+                gameCanvas.setFocusable(true);
+                gameCanvas.requestFocus();
             }
+
 
         }
 
