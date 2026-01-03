@@ -36,12 +36,12 @@ public class Player implements GameObject {
         // Create a floor/ground body
         playerBody = new Body();
         BodyFixture fixture = new BodyFixture(Geometry.createRectangle(50.0, 50.0));
-
-
+        fixture.setDensity(1.2);
+        fixture.setFriction(0.6);
 
         playerBody.addFixture(fixture);
 
-        playerBody.setMass(MassType.FIXED_ANGULAR_VELOCITY);
+        playerBody.setMass(MassType.NORMAL);
 
         world.addBody(playerBody);
 
@@ -77,13 +77,12 @@ public class Player implements GameObject {
     @Override
     public void draw(Graphics graphics) {
         graphics.setColor(color);
-        graphics.fillRect((int)( x * 100), (int) (y  * 100), 50, 50);
-        System.out.println(( x * 100) + " , " + (y  * 100));
+        graphics.fillRect((int) x, (int) y, 50, 50);
     }
 
     @Override
     public void update() {
-        playerBody.applyImpulse(new Vector2(0,1000));
+        playerBody.applyForce(new Vector2(0, 400));
         Vector2 position = playerBody.getWorldCenter();
         x = position.x;
         y = position.y;

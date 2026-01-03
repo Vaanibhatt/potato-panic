@@ -30,14 +30,13 @@ public class Game {
             delta = now - lastFrame;
             
             if (delta > SECOND_PER_FRAME) {
-                
+
+                enviroment.world.update(delta/BILLION);
                 for (GameObject gameObject : objects) {
                     gameObject.update();
                 }
                 
-                enviroment.world.update(0.1);
                 gameCanvas.render(objects);
-                
                 
                 lastFrame = now;
             }

@@ -20,7 +20,7 @@ public class Enviroment {
 
     public Enviroment() {
         world = new World<Body>();
-
+        world.setGravity(new Vector2(0, 1000000000));
 
     }
 
