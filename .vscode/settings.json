@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\vaani\\Downloads\\dyn4j-5.0.2.jar"
+    ]
+}

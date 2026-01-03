@@ -6,24 +6,33 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
+import org.dyn4j.geometry.Vector2;
+import org.dyn4j.world.World;
+import org.dyn4j.dynamics.*;
+
+
 public class GameCanvas extends Canvas {
 
     private BufferStrategy bufferStrategy = null;
 
-    public GameCanvas() {
+    World<Body> world;
 
+    public GameCanvas() {
+        
         JFrame jframe = new JFrame("Potato Panic");
 
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
         jframe.setLocationRelativeTo(null);
-
+        
         jframe.add(this);
-
-
-
+        
         this.setIgnoreRepaint(true);
+
         jframe.setVisible(true);
+        
+
+        this.requestFocus();
 
     }
 
@@ -32,7 +41,7 @@ public class GameCanvas extends Canvas {
         objects.sort((object1, object2) -> object1.getDepth() - object2.getDepth());
 
         if (bufferStrategy == null) {
-            createBufferStrategy(1);
+            createBufferStrategy(2);
             bufferStrategy = getBufferStrategy();
         }
 
@@ -46,9 +55,8 @@ public class GameCanvas extends Canvas {
             // Draws objects
             for (GameObject gameObject : objects) {
                 gameObject.draw(graphics);
-                
             }
-
+            
             bufferStrategy.show();
 
         } while (bufferStrategy.contentsRestored() || bufferStrategy.contentsLost());

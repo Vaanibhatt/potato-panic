@@ -16,4 +16,6 @@ public interface GameObject {
     // Each object will have a unique draw code
     public void draw(Graphics graphics);
 
+    public void update();
+
 }
