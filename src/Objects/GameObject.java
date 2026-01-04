@@ -1,9 +1,8 @@
-package src;
+package src.Objects;
 
 import java.awt.*;
 
-//Abstract class can't be instatiated. Acts like blueprint for other classes
-//Abstract class ensures I can never instantiate GameObject class
+
 public interface GameObject {
 
     // ---Everything has a depth and a draw function---\\

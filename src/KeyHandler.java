@@ -35,10 +35,6 @@ public class KeyHandler extends JPanel implements KeyListener {
                enviroment.player1.isMovingLeft = true;
           }
 
-          if (e.getKeyCode() == KeyEvent.VK_S) {
-               enviroment.player1.isMovingDown = true;
-          }
-
           if (e.getKeyCode() == KeyEvent.VK_D) {
                enviroment.player1.isMovingRight = true;
           }
@@ -51,10 +47,6 @@ public class KeyHandler extends JPanel implements KeyListener {
 
           if (e.getKeyCode() == KeyEvent.VK_LEFT) {
                enviroment.player2.isMovingLeft = true;
-          }
-
-          if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-               enviroment.player2.isMovingDown = true;
           }
 
           if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -77,10 +69,6 @@ public class KeyHandler extends JPanel implements KeyListener {
                enviroment.player1.isMovingLeft = false;
           }
 
-          if (e.getKeyCode() == KeyEvent.VK_S) {
-               enviroment.player1.isMovingDown = false;
-          }
-
           if (e.getKeyCode() == KeyEvent.VK_D) {
                enviroment.player1.isMovingRight = false;
           }
@@ -93,10 +81,6 @@ public class KeyHandler extends JPanel implements KeyListener {
 
           if (e.getKeyCode() == KeyEvent.VK_LEFT) {
                enviroment.player2.isMovingLeft = false;
-          }
-
-          if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-               enviroment.player2.isMovingDown = false;
           }
 
           if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
