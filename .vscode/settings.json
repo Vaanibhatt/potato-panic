@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\vaani\\Downloads\\dyn4j-5.0.2.jar"
+        "c:\\Users\\vaani\\Downloads\\dyn4j-5.0.2.jar",
+        "c:\\Users\\1052004\\Downloads\\jogamp-fat.jar"
     ]
 }
