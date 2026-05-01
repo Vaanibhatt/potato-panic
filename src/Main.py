@@ -1,9 +1,6 @@
 #My files
-from Vector2 import Vector2
-from PlayerType import PlayerType
-from Dimensions import Dimensions
 from GameWorld import GameWorld
-from Player import Player
+
 
 #Render & Physics
 import pygame
@@ -19,6 +16,8 @@ screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 #Create "playing" part of the game
 gameWorld = GameWorld()
 gameWorld.run(screen)
+
+pygame.quit()
 
 
 
