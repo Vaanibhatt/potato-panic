@@ -8,23 +8,21 @@ import pymunk
 class Platform(PhysicsObject):
 
     def __init__(self, coordinate, dimensions, space):
-        super(Platform, self).__init__(coordinate, dimensions, space)
+        super(Platform, self).__init__(coordinate, dimensions, space, 5, True)
         self.color = (0,0,0)
         
    
-        
-        
 
     def render(self, screen):
 
-        self.coordinates = Vector2(self.body.position.x, self.body.position.y)
-        self.shape = pygame.Rect((self.coordinates.x, self.coordinates.y, self.dimensions.l, self.dimensions.w)) #Updates Rect position
+        super(Platform, self).render(Vector2(self.body.position.x, self.body.position.y))
         
         pygame.draw.rect(screen, self.color, self.shape)
 
-        print(str(self.coordinates.x)  + ", " + str(self.coordinates.y)) #Debug print
+        # print(str(self.coordinates.x)  + ", " + str(self.coordinates.y)) #Debug print
+        # print(str(self.body.position.x)  + ", " + str(self.body.position.y)) #Debug print
 
-        
+         
 
     
 

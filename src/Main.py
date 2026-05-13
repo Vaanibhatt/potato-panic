@@ -1,7 +1,6 @@
 #My files
 from GameWorld import GameWorld
 
-
 #Render & Physics
 import pygame
 
