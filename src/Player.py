@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import pygame;
-import Vector2;
-
-class Player:
-    coordinates;
-
-    width;
-    height;
-    player;
-
-
-    def __init__(self, vector, width, height):
-        coordinates = Vector2(0,0);
-        self.width = width;
-        self.height = height;
-        player = pygame.Rect((self.width, self.height));
-
-    
-
-    
-=======
 from PlayerType import PlayerType
 from PhysicsObject import PhysicsObject
 from GameObject import GameObject
@@ -52,6 +30,3 @@ class Player(PhysicsObject):
 
         
 
-    
-
->>>>>>> f87e473d746f1f5911e3c086fe5af4fa6ee893d4
