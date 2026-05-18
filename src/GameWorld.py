@@ -17,10 +17,9 @@ space.gravity = (0,981)
 clock = pygame.time.Clock()
     
     
-def run(self, screen):
-        
-    player = Player(Vector2(200, 200), Dimensions(50,50), self.space, PlayerType.BLUE, True)
-    platform = Platform(Vector2(250, 500), Dimensions(200,60), self.space)
+def run(screen):
+    player = Player(Vector2(200, 200), Dimensions(50,50), space, PlayerType.BLUE, True)
+    platform = Platform(Vector2(250, 500), Dimensions(200,60), space)
 
     FPS = 80
     white = (255,255,255)
@@ -39,7 +38,7 @@ def run(self, screen):
 
             
         pygame.display.update() #Display everything
-        self.clock.tick(FPS)
-        self.space.step(2/FPS) #move simulation forward
+        clock.tick(FPS)
+        space.step(2/FPS) #move simulation forward
 
         
