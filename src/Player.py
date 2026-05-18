@@ -1,9 +1,11 @@
 from PlayerType import PlayerType
 from PhysicsObject import PhysicsObject
 from GameObject import GameObject
+
 from Vector2 import Vector2
 import pygame
-import pymunk
+
+import keyboard
 
 class Player(PhysicsObject):
 
@@ -12,8 +14,7 @@ class Player(PhysicsObject):
         self.isPotatoMan = isPotatoMan
         self.playerType = playerType
         
-   
-        
+
         
 
     def render(self, screen):
@@ -24,8 +25,6 @@ class Player(PhysicsObject):
         
         pygame.draw.rect(screen, self.currentColor.value, self.shape)
         
-        # print(str(self.coordinates.x)  + ", " + str(self.coordinates.y)) #Debug print
-        # print(str(self.body.position.x)  + ", " + str(self.body.position.y)) #Debug print
 
 
         

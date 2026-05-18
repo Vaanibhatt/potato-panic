@@ -14,14 +14,15 @@ class PhysicsObject(GameObject):
         else:
             self.body = pymunk.Body(mass, body_type=pymunk.Body.DYNAMIC)
 
-        self.body.position = (coordinates.x, coordinates.y)
 
+        self.body.position = (coordinates.x, coordinates.y)
         super(PhysicsObject, self).__init__(self.body.position, dimensions)
 
         self.poly = pymunk.Poly.create_box(self.body, (dimensions.w , dimensions.l))
 
         self.poly.mass = mass
         self.poly.density = 1
+        
         space.add(self.body, self.poly)
 
 

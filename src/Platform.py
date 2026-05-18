@@ -19,8 +19,6 @@ class Platform(PhysicsObject):
         
         pygame.draw.rect(screen, self.color, self.shape)
 
-        # print(str(self.coordinates.x)  + ", " + str(self.coordinates.y)) #Debug print
-        # print(str(self.body.position.x)  + ", " + str(self.body.position.y)) #Debug print
 
          
 

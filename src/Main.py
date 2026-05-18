@@ -1,5 +1,5 @@
 #My files
-from GameWorld import GameWorld
+import GameWorld
 
 #Render & Physics
 import pygame
@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 #Menu (add later)
 
 #Create "playing" part of the game
-gameWorld = GameWorld()
-gameWorld.run(screen)
+
+GameWorld.run(screen)
 
 pygame.quit()
