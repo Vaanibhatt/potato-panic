@@ -21,7 +21,7 @@ export const render = Render.create({
 });
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: "https://vaanibhatt.github.io/potato-panic/controller.html",
+	text: "https://vaanibhatt.github.io/potato-panic/src/controller.html",
 	width: 192,
 	height: 192,
 	colorDark : "#000000",
