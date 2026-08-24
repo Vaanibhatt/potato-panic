@@ -1,11 +1,35 @@
-<canvas></canvas>
+<!doctype html>
+<html>
+  <style>
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+    }
+    div.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+    #gameArea {
+      overflow: hidden;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+  <head> </head>
 
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+  <body>
+    <a id = "controllerLink" href="Controller/controller.html"></a>
+    <canvas id="gameArea"></canvas>
+    <div id="qrcode" class = "fixed"></div>
+
+    <script src="../node_modules/matter-js/build/matter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
