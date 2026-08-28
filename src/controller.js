@@ -38,7 +38,7 @@ class JoyStick {
   }
 }
 clearBG()
-let handleRadius = 100
+let handleRadius = 80
 let joystick = new JoyStick(190,200, handleRadius/2 , handleRadius)
 joystick.draw()
 
