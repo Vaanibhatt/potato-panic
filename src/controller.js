@@ -10,25 +10,38 @@ function clearBG() {
   ctx.fillStyle = "#101c35";
   ctx.fillRect(0, 0, controllerCanvas.width, controllerCanvas.height);
 }
-function drawCircle(x,y,radius) {
+function drawCircle(x,y,radius,color) {
   ctx.beginPath();
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
-  ctx.fillStyle = "#922121";
+  ctx.fillStyle = color;
   ctx.fill();
 }
+class JoyStick {
 
+  constructor(x,y, radius, handleRadius) {
+    this.x = x
+    this.y = y
 
+    this.radius = radius
+    this.handleRadius = handleRadius
+  }
+
+  draw() {
+    //handle
+    drawCircle(this.x,this.y, this.handleRadius, "#3a1852")
+    drawCircle(this.x,this.y, this.radius, "#8827a5")
+    
+    
+  }
+  update(){
+    
+  }
+}
+clearBG()
+
+let joystick = new JoyStick(350,450, 100 , 200)
+joystick.draw()
 
 setInterval(() => {
   //loop
 }, 1000 / FPS);
-
-
-
-class JoyStick {
-  constructor(x, y, radius, handleRadius) {}
-
-  draw() {
-    drawCircle()
-  }
-}
