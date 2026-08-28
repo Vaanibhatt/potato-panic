@@ -39,7 +39,7 @@ class JoyStick {
 }
 clearBG()
 let handleRadius = 80
-let joystick = new JoyStick(190,200, handleRadius/2 , handleRadius)
+let joystick = new JoyStick(200,130, handleRadius/2 , handleRadius)
 joystick.draw()
 
 setInterval(() => {
