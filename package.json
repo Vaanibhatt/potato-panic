@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "joystick-controller": "^2.0.0",
     "matter-js": "^0.20.0"
   }
 }

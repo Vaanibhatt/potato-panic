@@ -15,11 +15,13 @@
       margin-right: auto;
       display: block;
       width: 100vw;
+      
       height: 100vh;
       overflow: hidden;
       background-color: (16, 28, 53);
       height: auto;
     }
+
 
   </style>
 
@@ -30,5 +32,12 @@
   <body>
     <canvas id="controllerCanvas"></canvas>
     <script src="controller.js" type="module"></script>
+
+    <script src="../JoyStick-master/joy.js"></script>
+
+    <div id="joyDiv" style="width:200px;height:200px;position: absolute;right:100px;bottom:350px;"></div>
+    <script type = "text/javascript">
+      var joy2 = new JoyStick('joyDiv');
+    </script>
   </body>
 </html>
